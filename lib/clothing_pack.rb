@@ -1,3 +1,5 @@
+require_relative "clothing"
+
 class ClothingPack
   def initialize(path)
     @all_clothings = get_clothing_from_folder(path)
@@ -8,7 +10,7 @@ class ClothingPack
     file_paths = Dir.glob(File.join(path, "*.txt"))
     file_paths.map do |file_path|
       lines = File.readlines(file_path, chomp: true)
-      temp_range = lines[2].scan(/[+-]*\d+/)
+      temp_range = lines[2].scan(/[+-]?\d+/)
       Clothing.new(
         lines[0],
         lines[1],

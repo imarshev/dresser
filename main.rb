@@ -1,4 +1,3 @@
-require_relative "lib/clothing"
 require_relative "lib/clothing_pack"
 
 clothing_pack = ClothingPack.new(File.join(__dir__, "data"))
