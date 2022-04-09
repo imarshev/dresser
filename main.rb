@@ -1,6 +1,6 @@
 require_relative "lib/clothing_pack"
 
-clothing_pack = ClothingPack.new(File.join(__dir__, "data"))
+clothing_pack = ClothingPack.from_folder(File.join(__dir__, "data"))
 
 puts "🌡️ Какая температура за окном? (можно с минусом):"
 user_input = gets.chomp
